@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>frame</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: rgba(191, 194, 192, 0.333);
+      }
+      /*
+      * {
+        border: 1px solid black;
+      }
+      */
+      .shadow {
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+      }
+      .flex {
+        display: flex;
+      }
+      .whilte {
+        background-color: white;
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .column {
+        flex-direction: column;
+      }
+      .margin10 {
+        margin: 10px;
+      }
+      .row-center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 200px;
+        height: 100px;
+        border-bottom: 1px solid rgb(192, 188, 188);
+      }
+      .daohang {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid black;
+        margin: 0px;
+        padding: 20px;
+        font-size: 15px;
+        color: glaw;
+        font-weight: bold;
+        letter-spacing: 3px;
+      }
+      @media (max-width: 600px) {
+        .cebianlan {
+          display: none;
+        }
+        .neironglan {
+          flex-direction: column;
+        }
+        .youqu {
+          margin-left: 8px;
+        }
+        .shujuqu {
+          margin: 3px;
+          flex: auto;
+        }
+      }
+    </style>
+  </head>
+  <body class="flex">
+    <!--侧边栏-->
+    <div
+      class="whilte shadow cebianlan"
+      style="width: 200px; height: 100vh; z-index: 2"
+    >
+      <!--头像栏-->
+      <div class="flex row-center">
+        <img
+          src="微信图片_20240901010807.jpg"
+          alt="xiaoxin"
+          width="60px"
+          height="60px"
+          style="margin: 10px; border-radius: 50%"
+        />
+        <p style="margin: 0px">wwd</p>
+      </div>
+      <!--导航栏-->
+      <div class="flex1">
+        <div class="daohang">导航1</div>
+        <div class="daohang">导航2</div>
+        <div class="daohang">导航3</div>
+        <div class="daohang">导航4</div>
+        <div class="daohang">导航5</div>
+      </div>
+    </div>
+    <!--主区域-->
+    <div class="flex1 flex column">
+      <!--头部栏-->
+      <div class="whilte shadow" style="height: 60px; z-index: 1"></div>
+      <!--内容区-->
+      <div class="flex1 flex neironglan" style="overflow: auto">
+        <!--内容左区-->
+        <div class="flex column" style="flex: 3">
+          <!--数据区-->
+          <div class="flex neironglan">
+            <!--数据1-->
+            <div
+              class="flex1 whilte margin10 shadow shujuqu"
+              style="height: 100px"
+            ></div>
+            <!--数据2-->
+            <div
+              class="flex1 whilte margin10 shadow shujuqu"
+              style="height: 100px"
+            ></div>
+            <!--数据3-->
+            <div
+              class="flex1 whilte margin10 shadow shujuqu"
+              style="height: 100px"
+            ></div>
+            <!--数据4-->
+            <div
+              class="flex1 whilte margin10 shadow shujuqu"
+              style="height: 100px"
+            ></div>
+          </div>
+          <!--列表区-->
+          <div class="flex column">
+            <!--列表1-->
+            <div
+              class="flex whilte margin10 shadow"
+              style="height: 150px"
+            ></div>
+            <!--列表2-->
+            <div
+              class="flex whilte margin10 shadow"
+              style="height: 150px"
+            ></div>
+            <!--列表3-->
+            <div
+              class="flex whilte margin10 shadow"
+              style="height: 150px"
+            ></div>
+            <!--列表4-->
+            <div
+              class="flex whilte margin10 shadow"
+              style="height: 150px"
+            ></div>
+            <!--列表5-->
+            <div
+              class="flex whilte margin10 shadow"
+              style="height: 150px"
+            ></div>
+          </div>
+        </div>
+        <!--内容右区-->
+        <div class="flex column youqu" style="flex: 1">
+          <!--提示区-->
+          <div
+            class="flex column whilte margin10 shadow"
+            style="height: 150px"
+          ></div>
+          <!--消息区-->
+          <div
+            class="flex column whilte margin10 shadow"
+            style="height: 300px"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
